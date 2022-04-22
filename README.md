@@ -6,14 +6,13 @@ If you have questions regarding the human-protocol project, this repository is t
 Please take a look around and ask questions via issues, comments on files, or find us on the [Human-Protocol](https://www.humanprotocol.org)
 
 ##Contents
-
 |Document|Description|
 |---|---|
 |[Context.md](https://github.com/)|Project Context|
 
 |[DatabaseStructure.md](https://github.com/TurtlePay/architecture/blob/master/DatabaseStructure.md)|Database Structure|
 |[Goals.md](https://github.com/TurtlePay/architecture/blob/master/Goals.md)|Project Goals|
-(https://github.com/TurtlePay/architecture/blob/master/Roadmap.md)|Project Roadmap|
+
 |[Architecture.md](https://github.com/TurtlePay/architecture/blob/master/Architecture.md)|Service Delivery Architecture|
 
-###### (c) 
+
