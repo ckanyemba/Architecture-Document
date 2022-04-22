@@ -5,7 +5,8 @@ If you have questions regarding the human-protocol project, this repository is t
 
 Please take a look around and ask questions via issues, comments on files, or find us on the [Human-Protocol](https://www.humanprotocol.org)
 
-##Contents
+## Contents
+
 |Document|Description|
 |---|---|
 |[Context.md](https://github.com/)|Project Context|
