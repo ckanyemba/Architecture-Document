@@ -26,12 +26,42 @@ The SDL system allows Application to:
 
 Actors are stakeholders that interact with product directly.
 
-| Stakeholder Name         | Actor (Yes/No) | Concern  |
-|--------------------------|----------------|----------|
-|                          | No             | Get the SDL system with enough quality and functionality that fulfill their goals |
-| PM / Architect / Analyst | No             | Use Customer Requirements Specification |
-| Developers               | Yes            | Construct and deploy the system from specifications |
-| Testers                  | No             | Test the system to ensure that it is suitable for use |
+# HUMAN App
+
+
+## Description
+
+The HUMAN App is the frontend interface which allows earners to connect to HUMAN Protocol and solve labeling tasks for $HMT rewards. 
+It is written in the React.js. Please visit [humanprotocol.org](https://humanprotocol.org) for more information
+
+## Note:
+The application is in active development state and can have breaking changes.
+
+### Prerequisites:
+
+* `REACT_APP_API_URL`: Human APP API
+* `REACT_APP_HCAPTCHA_SITE_KEY`: Site Key for HCaptcha widget
+* `REACT_APP_CIVIC_APP_ID`: Civic Integration APP ID
+
+
+### Running locally:
+$ `cp .env.example .env`
+
+$ `yarn`
+
+$ `yarn start`
+
+### Running in the production:
+$ `yarn`
+
+$ `yarn build`
+
+$ `REACT_APP_API_URL=${API_URL} PORT=${PORT} yarn start-prod`
+
+
+# Note for developers
+Bootstrap framework is DEPRECATED. For newer components everyone should use material-ui ui-kit instead
+
 
 ### 2.3. Business Goals
 
