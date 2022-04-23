@@ -1,0 +1,51 @@
+@startuml
+
+'!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Component.puml
+!include <c4/C4_Component.puml> 
+LAYOUT_TOP_DOWN()
+LAYOUT_WITH_LEGEND()
+
+title Component Diagram for Human Protocol - Human API
+
+Person(authorized, "User", "Backend Services / Frontend Services", "user_check")
+System(person_authorized, "Authorized User via Human API", "Sends manifest to Reputation Agent", "user_check")
+
+System_Boundary(DApp, "   "){
+Container(network, "ENS", "ether")
+Container(admin, "Ethereum Blockchain", "Smart Bounty and New Created")
+Container(extFe, "Swarm", "User Interfaces, [JavaScript client for the Swarm database]")
+Container(whisper, "Whisper", "Whisper is a component, [Whisper is available through CocoaPods]")
+Container(reader, "auction.ethereumbook.eth", " ")
+Container(auctionRepo, "AuctionRepository", "Smart Contract[Manage non-fungible tokens by implementing an asset/token/deed]")
+Container(deepRepo, "DeepRepository", "[Holds asset/token/deed that is to be auctioned(ERC721 Ownership by smart contract)]")
+Container(notification, "HTML, CSS, JS Frontend", "interface")
+Container(blogService, "Auction Images", " ")
+Container(auctionChat, "Auction Chat Rooms", " ")
+}
+
+Rel(person_authorized, extFe, " ")
+Rel(person_authorized, admin, "Signed manifest, Smart Bount, and Funds")
+Rel(admin, auctionRepo, " ")
+Rel(person_authorized, whisper, " ")
+Rel(person_authorized, network, " ")
+Rel(auctionRepo, admin, " ")
+Rel(authorized, person_authorized, " ")
+Rel(extFe, person_authorized, " ")
+Rel(admin, person_authorized, " ")
+Rel(deepRepo, admin, " ")
+Rel(whisper, person_authorized, " ")
+Rel(network, person_authorized, "  ")
+Rel(admin, deepRepo, " ")
+
+Rel(network, reader, " ", " ")
+Rel(reader, network, " ", " ")
+Rel(extFe, notification, " ")
+Rel(whisper, auctionChat, " ")
+Rel(auctionChat, whisper, " ")
+Rel(extFe, blogService, " ")
+
+Rel(notification, extFe, " ")
+Rel(blogService, extFe, " ")
+
+
+@endumlhm
