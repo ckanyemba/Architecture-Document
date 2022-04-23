@@ -20,7 +20,8 @@ The SDL system allows Application to:
 -   Use vehicle HMI: VR, TTS, buttons (physical and touch-screen), vehicle display, audio system. etc.
 -   Retrieve Vehicle Data (seat belt position, transmission shift lever position, airbag status, etc.).
 
-![Alt text](https://www.github.com/ckanyemba/Architecture-Document/Diagrams/C4_Model/C4_Context.svg "a title")
+![Alt text]("a title")
+[![Alt text](https://github.com/ckanyemba/Architecture-Document/Diagrams/C4_Model/C4_Context.svg)](https://github.com)
 
 ### 2.2. Product Stakeholders
 
