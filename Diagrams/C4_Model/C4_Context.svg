@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="605px" preserveAspectRatio="none" style="width:458px;height:605px;background:#FFFFFF;" version="1.1" viewBox="0 0 458 605" width="458px" zoomAndPan="magnify"><defs/><g><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="114" x="328" y="10.3809">System context diagram</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="207" x="235" y="22.959">Context for human application point of view</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="124" x="321" y="35.5371">of the Architecture project</text><!--MD5=[fedee1b5a49a422abb3fa93dface23fd]
+cluster p1--><rect fill="#FFFFFF" height="273" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="445" x="7" y="183.7344"/><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="0" x="231.5" y="202.3438"/><text fill="#444444" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="51" x="204" y="218.3164">[System]</text><!--MD5=[691a1726be306d84324876b17512fe90]
+entity system--><rect fill="#438DD5" height="55.2188" style="stroke:#3C7FC0;stroke-width:1.5;" width="209" x="142.5" y="237.7344"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="121" x="186.5" y="264.3438">DApps Browser</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="189" x="152.5" y="280.3164">[Allows interacting with blockchain]</text><!--MD5=[c32a75e9a7e9a655d23f61c16b974305]
+entity answer--><rect fill="#438DD5" height="70.3125" style="stroke:#3C7FC0;stroke-width:1.5;" width="193" x="23.5" y="370.7344"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="39" x="100.5" y="397.3438">Input</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="170" x="33.5" y="413.3164">[Answer stored, funds released,</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="98" x="71" y="428.4102">requester notified]</text><!--MD5=[1f467a77356510f281558597710a3470]
+entity result--><rect fill="#438DD5" height="55.2188" style="stroke:#3C7FC0;stroke-width:1.5;" width="184" x="252" y="378.2344"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="129" x="279.5" y="404.8438">Result Validation</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="164" x="262" y="420.8164">[Allows results to be validated]</text><!--MD5=[2d3c5e0b954a749fced3fb92086cf371]
+entity author--><rect fill="#08427B" height="75.3438" style="stroke:#073B6F;stroke-width:1.5;" width="144" x="175" y="44.7344"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="124" x="185" y="71.3438">Authorized User</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="249" y="89.3926"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="222.5" y="107.002">[Person]</text><!--MD5=[642cff2779480a9b9d078bf3510fb495]
+link author to system--><path d="M234.59,119.7744 C231.87,129.4044 229.38,139.8644 228,149.7344 C224.08,177.7444 230.17,209.4744 236.47,232.4044 " fill="none" id="author-to-system" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="237.9,237.4544,239.2736,227.7018,236.5264,232.6468,231.5814,229.8995,237.9,237.4544" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="0" x="233" y="164.2295"/><!--MD5=[8059e85408030059ea78477b7a9e57c8]
+link system to author--><path d="M247,237.6444 C247,207.9744 247,159.5844 247,124.8744 " fill="none" id="system-to-author" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="247,119.8644,243,128.8644,247,124.8644,251,128.8644,247,119.8644" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="0" x="252" y="164.2295"/><!--MD5=[a3c3c1254165314024587c9eea904c26]
+link system to answer--><path d="M200.16,293.0044 C187.78,301.4744 175.08,311.5744 165,322.7344 C153.65,335.2944 144.09,351.2144 136.73,365.6844 " fill="none" id="system-to-answer" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="134.33,370.5244,141.9005,364.2246,136.5432,366.0409,134.7269,360.6835,134.33,370.5244" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="0" x="170" y="337.2295"/><!--MD5=[352aacc5722e136abeedd287a9310a96]
+link answer to system--><path d="M151.4,370.4844 C172.16,347.8544 199.12,318.4544 219.12,296.6444 " fill="none" id="answer-to-system" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="222.51,292.9344,213.484,296.8754,219.1353,296.6237,219.3869,302.275,222.51,292.9344" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="0" x="199" y="337.2295"/><!--MD5=[d2b06a5da9fee645a623dfe08f054b02]
+link system to result--><path d="M260.37,292.8544 C268.08,307.4244 278.34,325.5344 289,340.7344 C296.95,352.0644 306.52,363.7444 315.43,373.9744 " fill="none" id="system-to-result" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="318.94,377.9744,315.9883,368.5782,315.6333,374.2239,309.9876,373.8689,318.94,377.9744" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="0" x="294" y="337.2295"/><!--MD5=[9277813da2379a89acda82f6715b2006]
+link result to system--><path d="M331.36,377.9044 C323.08,361.4044 311.51,340.1444 299,322.7344 C292.65,313.8944 285.06,304.9444 277.67,296.8644 " fill="none" id="result-to-system" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="274.06,292.9644,277.2404,302.2856,277.4573,296.6329,283.11,296.8499,274.06,292.9644" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="0" x="315" y="337.2295"/><rect fill="#DDDDDD" height="119.6563" rx="5" ry="5" style="stroke:#000000;stroke-width:1.0;" width="174" x="262" y="469.7344"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="0" x="324" y="491.2676"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="33" x="328" y="491.2676">Type</text><rect fill="#08427B" height="17.6094" style="stroke:none;stroke-width:1.0;" width="56" x="268" y="494.3438"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="292" y="508.877"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="328" y="508.877">person</text><rect fill="#686868" height="17.6094" style="stroke:none;stroke-width:1.0;" width="56" x="268" y="511.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="292" y="526.4863"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="328" y="526.4863">external person</text><rect fill="#1168BD" height="17.6094" style="stroke:none;stroke-width:1.0;" width="56" x="268" y="529.5625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="280" y="544.0957"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="328" y="544.0957">system</text><rect fill="#999999" height="17.6094" style="stroke:none;stroke-width:1.0;" width="56" x="268" y="547.1719"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="292" y="561.7051"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="328" y="561.7051">external system</text><rect fill="#438DD5" height="17.6094" style="stroke:none;stroke-width:1.0;" width="56" x="268" y="564.7813"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="280" y="579.3145"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="328" y="579.3145">container</text><line style="stroke:#000000;stroke-width:1.0;" x1="268" x2="430" y1="476.7344" y2="476.7344"/><line style="stroke:#000000;stroke-width:1.0;" x1="268" x2="430" y1="494.3438" y2="494.3438"/><line style="stroke:#000000;stroke-width:1.0;" x1="268" x2="430" y1="511.9531" y2="511.9531"/><line style="stroke:#000000;stroke-width:1.0;" x1="268" x2="430" y1="529.5625" y2="529.5625"/><line style="stroke:#000000;stroke-width:1.0;" x1="268" x2="430" y1="547.1719" y2="547.1719"/><line style="stroke:#000000;stroke-width:1.0;" x1="268" x2="430" y1="564.7813" y2="564.7813"/><line style="stroke:#000000;stroke-width:1.0;" x1="268" x2="430" y1="582.3906" y2="582.3906"/><line style="stroke:#000000;stroke-width:1.0;" x1="268" x2="268" y1="476.7344" y2="582.3906"/><line style="stroke:#000000;stroke-width:1.0;" x1="324" x2="324" y1="476.7344" y2="582.3906"/><line style="stroke:#000000;stroke-width:1.0;" x1="430" x2="430" y1="476.7344" y2="582.3906"/><!--MD5=[670debead8212a2dbc46aebb9ec7a49f]
+@startuml
+
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+!include DEVICONS/angular.puml
+!include DEVICONS/java.puml
+!include DEVICONS/msql_server.puml
+
+header System context diagram \nContext for human application point of view \n of the Architecture project
+LAYOUT_WITH_LEGEND()
+
+
+Person(author, "Authorized User", "[Person]")
+System_Boundary(p1, " "){
+    Container(system, "DApps Browser", "Allows interacting with blockchain")
+    Container(answer, "Input","Answer stored, funds released, requester notified")
+    Container(result, "Result Validation", "Allows results to be validated")
+}
+
+Rel(author, system, " ")
+Rel(system, answer, " ")
+Rel(system, result, " ")
+Rel(system, author, " ")
+Rel(answer, system, " ")
+Rel(result, system, " ")
+
+@enduml 
+
+@startuml
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 0
+    FontColor #444444
+    BorderColor #444444
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+
+
+
+
+
+
+sprite $angular [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000016500000000000000000000000
+000000000000000000004AFFFFB500000000000000000000
+0000000000000000039FFFFFFFFFFB500000000000000000
+0000000000000039EFFFFFFEFFFFFFFE9400000000000000
+0000000000028DFFFFFFFFF7AFFFFFFFFFEA400000000000
+0000000016CFFFFFFFFFFFF12FFFFFFFFFFFFE9300000000
+0000000BFFFFFFFFFFFFFF800BFFFFFFFFFFFFFFD0000000
+0000000DFFFFFFFFFFFFFF2003FFFFFFFFFFFFFFD0000000
+0000000BFFFFFFFFFFFFFA0000CFFFFFFFFFFFFFB0000000
+00000009FFFFFFFFFFFFF300004FFFFFFFFFFFFF90000000
+00000007FFFFFFFFFFFFC000000DFFFFFFFFFFFF70000000
+00000005FFFFFFFFFFFF40043006FFFFFFFFFFFF50000000
+00000003FFFFFFFFFFFD000BA000EFFFFFFFFFFF30000000
+00000001FFFFFFFFFFF6002FF2007FFFFFFFFFFF10000000
+00000000FFFFFFFFFFE0008FF9000EFFFFFFFFFF00000000
+00000000EFFFFFFFFF8000EFFF2008FFFFFFFFFD00000000
+00000000CFFFFFFFFF1006FFFF9001FFFFFFFFFB00000000
+00000000AFFFFFFFF9000DFFFFF1009FFFFFFFF900000000
+000000008FFFFFFFF20005555552002FFFFFFFF800000000
+000000006FFFFFFFB00000000000000AFFFFFFF600000000
+000000004FFFFFFF4000000000000002FFFFFFF400000000
+000000002FFFFFFD0005888888888000BFFFFFF200000000
+000000000FFFFFF5000EFFFFFFFFF4004FFFFFF000000000
+000000000EFFFFE0006FFFFFFFFFFB000CFFFFE000000000
+000000000CFFFF7000CFFFFFFFFFFF2005FFFFC000000000
+000000000AFFFF1002FFFFFFFFFFFF9000DFFFA000000000
+0000000008FFFB444AFFFFFFFFFFFFF3338FFF8000000000
+0000000006FFFFFFFFFFFFFFFFFFFFFFFFFFFF6000000000
+0000000003EFFFFFFFFFFFFFFFFFFFFFFFFFFE2000000000
+000000000018FFFFFFFFFFFFFFFFFFFFFFFF800000000000
+00000000000019FFFFFFFFFFFFFFFFFFFF91000000000000
+000000000000003CFFFFFFFFFFFFFFFFB200000000000000
+00000000000000004DFFFFFFFFFFFFC30000000000000000
+0000000000000000005EFFFFFFFFE5000000000000000000
+000000000000000000007FFFFFE700000000000000000000
+00000000000000000000019FF91000000000000000000000
+000000000000000000000002200000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<DEV ANGULAR>> White
+sprite $java [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000120000000000000000000
+000000000000000000000000000080000000000000000000
+0000000000000000000000000001B0000000000000000000
+0000000000000000000000000005A0000000000000000000
+000000000000000000000000000C70000000000000000000
+000000000000000000000000006F10000000000000000000
+00000000000000000000000005F700000000000000000000
+0000000000000000000000006FB000000000000000000000
+000000000000000000000009FB0001650000000000000000
+0000000000000000000001CFA0018C200000000000000000
+000000000000000000002DF9005E90000000000000000000
+00000000000000000001DF8008F700000000000000000000
+0000000000000000000BFB005FA000000000000000000000
+0000000000000000001FF200CF3000000000000000000000
+0000000000000000001FD000FF4000000000000000000000
+0000000000000000000DE000EFB000000000000000000000
+00000000000000000005F2008FF600000000000000000000
+00000000000000000000AA001EFE00000000000000000000
+000000000000000000000B4004FF40000000000000000000
+0000000000000000000000A100BF20000000000000000000
+00000000000000000000000400A900000011000000000000
+00000000000000016730000001800000046CB10000000000
+00000000000005BD30000000010000120000DC0000000000
+0000000000001DFEA7765567889BCB7000008F1000000000
+000000000000001468899988753200000000BE0000000000
+000000000000000001000000000000000004F50000000000
+0000000000000000C800000000024200004E500000000000
+0000000000000000CFFDCBBBCEFFFC201881000000000000
+00000000000000000268AAAAA86400003000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000009A10000002410000000000000000000
+00000000000000000CFFFEDDEFFFF6000000000000000000
+00000000000003520049CEEFFCA720000000000000000000
+000000000019B50000000000000000000002400000000000
+0000000002FF820000000000000000000378000000000000
+00000000018DFFDB9766555566789ACCA610160000000000
+00000000000001357899AABAA9875310026AA10000000000
+0000000000000003542211111233579BCB72000000000000
+000000000000000002457778888765310000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<DEV JAVA>> White
+sprite $msql_server [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000001000000000000000000000000000
+000000000000000000454300000000000000000000000000
+000000000000000176100600000000000000000000000000
+000000000000007C77530800000000000000000000000000
+000000000000099080246B70000000000000000000000000
+00000000000003B75B1283B0000000000000000000000000
+00000000000000475BAE9688000000000000000000000000
+000000000000000466004ABACB9520000000000000000000
+000000000000000049147060005CDD940000000000000000
+000000000000000009B600801963304AE810000000000000
+000000000000000002FD9497A10800001BF8000000000000
+000000000000000000915CFD201902896467C20000000000
+000000000000000000802BB8FAAAB8200A002B2000000000
+0000000000000000007394602EFA0000940001A100000000
+000000000000000000A80928BE5D70056000001800000000
+000000000000000000E82DB48500A6371489875200000000
+0000000000000000036BF60480001CDCA620000000000000
+0000000000000000084DC228038CB7200000000000000000
+00000000000000003B941798CA9800000000000000000000
+000000000000000196506EE9403900000000000000000000
+0000000000000008769C60A0353B00000000000000000000
+000000000000009DCD8900A0007B00000000000000000000
+00000000000009F91B165090174B00000000000000000000
+0000000000009C9059008788602B00000000000000000000
+0000000000062590D1004FD1004900000000000000000000
+00000000005003C7839C8C27505800000000000000000000
+00000000080000EFC830760014A500000000000000000000
+00000000831689ED1000D00055B200000000000000000000
+00000000E6510754D206728600D000000000000000000000
+00000001F10027003C6EB60002A000000000000000000000
+00000000CA0080005BFE6000075000000000000000000000
+000000002F86148843B037653B0000000000000000000000
+0000000002DC62000A100015780000000000000000000000
+000000000007D71063037740710000000000000000000000
+000000000000049AB8630000800000000000000000000000
+000000000000000025887656200000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<DEV MSQL_SERVER>> White
+
+header System context diagram \nContext for human application point of view \n of the Architecture project
+hide stereotype
+legend right
+|=              |= Type |
+|<#08427B>      | person |
+|<#686868>      | external person |
+|<#1168BD>   | system |
+|<#999999>      | external system |
+|<#438DD5>   | container |
+endlegend
+
+
+rectangle "==Authorized User\n\n [Person]" <<person>> as author
+rectangle "== \n<size:12>[System]</size>" <<boundary>> as p1{
+    rectangle "==DApps Browser\n//<size:12>[Allows interacting with blockchain]</size>//" <<container>> as system
+    rectangle "==Input\n//<size:12>[Answer stored, funds released, requester notified]</size>//" <<container>> as answer
+    rectangle "==Result Validation\n//<size:12>[Allows results to be validated]</size>//" <<container>> as result
+}
+
+author - -> system : "=== "
+system - -> answer : "=== "
+system - -> result : "=== "
+system - -> author : "=== "
+answer - -> system : "=== "
+result - -> system : "=== "
+
+@enduml 
+
+PlantUML version 1.2022.0(Tue Jan 11 18:16:42 CAT 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: ZA
+--></g></svg>
