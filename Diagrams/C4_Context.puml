@@ -1,0 +1,47 @@
+@startuml
+
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Context.puml
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+!include DEVICONS/angular.puml
+!include DEVICONS/java.puml
+!include DEVICONS/msql_server.puml
+
+header System context diagram \nContext for human application point of view \n of the Architecture project
+LAYOUT_WITH_LEGEND()
+
+Person(authorised, "Authorised User", "[Frontend/backend]", "Requester creates job")
+
+
+System_boundary(dap, "DAPP Browser"){
+System(createssmart, "Smart Contract", "[Blockchain]", "Creates smart bounty, funds with tokens")
+System(reputationAgent, "Store", "Stores dataset", "[Writes contents of mainfest]")
+System(exchange, "Exchange", "[Gets job and begings work, servers]")
+
+    System_boundary(worker, "Task Takers"){
+        System(website01, "Worker01", " ")
+        System(website02, "Worker02", " ")
+        System(website03, "Worker03", " ")
+    }
+    System_boundary(visitor, "Visitors Answers"){
+        System(visitor01, "Visitor01"," ")
+        System(visitor02, "Visitor02", " ")
+        System(visitor03, "Visitor03", " ")
+    }
+
+System(answers, "Answers", " Answers stored, funds released, requester notified")
+System(result, "Validation", "Results validated")
+}
+
+Rel(authorised, createssmart, " ")
+Rel(authorised, storesdataset, " ")
+Rel(createssmart, exchange, " ")
+Rel(storesdataset, exchange, " ")
+Rel(exchange, worker, " ")
+Rel(visitor, answers, " ")
+Rel(result, authorised, " ")
+Rel(answers, result, " ")
+
+
+
+@enduml 
