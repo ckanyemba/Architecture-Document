@@ -28,7 +28,7 @@ Actors are stakeholders that interact with product directly.
 
 | Stakeholder Name         | Actor (Yes/No) | Concern  |
 |--------------------------|----------------|----------|
-| Ford Company             | No             | Get the SDL system with enough quality and functionality that fulfill their goals |
+|                          | No             | Get the SDL system with enough quality and functionality that fulfill their goals |
 | PM / Architect / Analyst | No             | Use Customer Requirements Specification |
 | Developers               | Yes            | Construct and deploy the system from specifications |
 | Testers                  | No             | Test the system to ensure that it is suitable for use |
