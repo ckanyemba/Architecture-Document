@@ -90,7 +90,8 @@ A sandbox mode for all API requests will be provided to all developers to aide i
 
 The following diagram has been created to document the design concept driving [Phase 2](https://github.com/TurtlePay/architecture/blob/master/Roadmap.md#phase-2).
 
-![C4_Component](https://user-images.githubusercontent.com/95967301/164977155-1e860d46-489f-4b07-82c9-a40bbd504477.svg)
+![C4_Component](https://user-images.githubusercontent.com/95967301/164978032-1de41ece-2ed1-4a1f-867c-fa1bb9dfc58f.svg)
+
 
 
 ###### (c)
