@@ -1,0 +1,10 @@
+# Quality Attributes
+
+
+|Quality Attribute|Description|
+|---|---|
+|Performance|The verification of data written into the database is accomplished by a consensus of participating nodes. By leveraging blockchain technology, HUMAN Protocol smart contracts ensure that tasks are served, completed, and compensated in a reliable and fair manner.|
+|Availability|Blockchain ledgers allow for ‘open books’, so all nodes in the network can ensure that funds are being distributed fairly. Human Protocol uses smart contracts to ensure fairness, efficiency, cost savings, and instill confidence that all sides of a deal complete their requirements as specified at the outset. |
+|Usability| Websites with pre-existing ETH accounts don’t need to enroll anywhere to get started. They can simply drop in the JavaScript embed line and set their ETH key on the server side.Pursuant to all applicable regulations, HUMAN Protocol transactions can be made across the globe, and will generally be executed within seconds at a fraction of the cost of an international wire transfer, and with reliable fidelity to the terms of the contract — this ensures timely, reliable, global payments for work performed.|
+|Security|Many larger tasks can be decomposed into sub-tasks requiring very different levels of trust. Consider our document scan example above. Seeing the entire page requires high trust if it contains personally identifiable information (PII). However, once a field has been labeled by type then reading its contents may require no trust at all. A social security number has no value in isolation: it becomes PII only when combined with a name and address. When data is added to the database - and it can only be added, not taken away - the update is recorded and replicated across each computer node in the network.|
+|Modifiability|The contract cannot be changed once it has been deployed — smart contracts are, therefore, tamper-proof. Even if a contract is canceled, smart contracts can enforce guarantees on the escrowed funds for both parties: the portion of work already completed will be compensated, and the balance of funds will be returned to the requester.|
