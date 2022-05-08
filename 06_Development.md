@@ -1,132 +1,26 @@
-# Development View
+#.. _deployment_view:
 
-## 4.8. Development View
+Deployment View
+===============
 
-### 4.8.1. Implementation Technologies
+.. todo::
+  Add a deployment diagram.
+  **Contents.**
 
-- C++98 language is selected as a programming language for SmartDeviceLink as a OS and CPU architecture independent.
-- [*CMake*](https://cmake.org/documentation/) tool-chain selected as a cross-platform building tools.
-- [Google Test](https://github.com/google/googletest/blob/master/googletest/docs/Documentation.md) with [Google Mock](https://github.com/google/googletest/blob/master/googlemock/docs/Documentation.md) extension is chosen as an opensource C++ test framework.
+  This view describes the environment within which the system is executed.
+  It describes the geographic distribution of the system or the structure
+  of the hardware components that execute the software. It documents
+  workstations, processors, network topologies and channels, as well as
+  other elements of the physical system environment.
 
-### 4.8.2. Modules and Code Base Organization
+  **Motivation.**
 
-Development view organizes SmartDeviceLink components into logical and abstract groups called layers. The layers describe the major tasks that the components perform. The layers have different responsibilities and different providers
+  Software is not much use without hardware. These models should enable the
+  operator to properly install the software.
 
-##### Development View Diagram
-![Development View](./assets/DevelopmentView.png)
-
-***Elements description***
-
-#### OS Layer
-  - *Responsibility*
-    - Providing high-level interface for OS and hardware resource manipulation.
-  - *Relations:*
-    - Used by all other layers
-  - *Interfaces:*
-    - Provides threads, timers, synchronization, data, time, file and logging interfaces
-  - *Behavior:*
-    - Wrapping all OS-system-specific API to C++ Objects.
-  - *Constraints:*
-    - N/A
-
-#### Transport Layer
-  - *Responsibility*
-    - Encapsulates mobile and HMI transports usage
-  - *Relations:*
-    - Protocol layer
-  - *Interfaces:*
-    - TransportManager
-    - HMIMessageHandler
-  - *Behavior:*
-    - Opens connection
-    - Performs device discovery
-    - Sends / receives messages
-  - *Constraints:*
-    - [Transport Manager Programming guide](../../Transport Manager Programming/index.md)
-
-#### Protocol Layer
-  - *Responsibility:*
-    - Encapsulates protocol manipulation.
-  - *Relations:*
-    - Application layer
-    - Transport layer
-  - *Interfaces:*
-    - ProtocolHandler
-    - ConnectionHandler
-    - SecurityManager
-  - *Behavior:*
-    - Parses and handles messages from transport layer according to Protocol
-    - Notify upper level about new transport and protocol layer events
-    - Provides Transport Layer manipulation by upper layers
-  - *Constraints:*
-    - [SmartDeviceLink Protocol specification](https://github.com/smartdevicelink/protocol_spec/blob/master/README.md)
-
-#### Application Layer
-  - *Responsibility:*
-    - Represents main business logic implementation
-  - *Relations:*
-    - Protocol Layer
-  - *Interfaces:*
-    - ApplicationManager
-    - MediaManager
-    - RPC Service
-    - RequestController
-    - App Launch
-    - Resumption
-    - Plugin Manager
-    - RC RPC Plugin
-    - SDL RPC Plugin
-    - VehicleInfo Plugin
-    - Policy
-   - *Behavior:*
-     - Main business logic functionality.
-  - *Constraints:*
-    - [FORD Mobile API Spec](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/interfaces/MOBILE_API.xml)
-    - [FORD HMI API Spec](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/interfaces/HMI_API.xml)
-
-### 4.8.3. Development Environment and Standards
--   Minimum development and testing environment for Ubuntu:
-    -   Debug Environment: Ubuntu 16.04 LTS x32/x64, Qt 5.3
-    -   Compiler: GCC 5.3.1 (OS Ubuntu), Lua 5.2
-    -   Build system: Cmake 3.10.2
--   Recommended development and testing environment for Ubuntu:
-    -   Debug Environment: Ubuntu 18.04 LTS x32/x64, Qt 5.3
-    -   Compiler: GCC 7.3.0 (OS Ubuntu), Lua 5.2
-    -   Build system: Cmake 3.10.2
--   Development and testing environment for SDL Windows x64:
-    -   Build system: Windows 7 x64, CMake
-    -   Compiler: Microsoft Visual Studio Express Edition 2013 x64
--   Development and testing environment for SDL Qt for Windows x32:
-    -   Build system: Windows 7 x32, Qt 5.5, CMake, QT Creator
-    -   Compiler: Microsoft Visual Studio Express Edition 2010 x32
--   Requirements Management system: LuxProject (JIRA, Confluence)
--   Source Control System: GitHub
--   Issue Tracking System: LuxProject (JIRA)
--   Document Management System: LuxProject (JIRA, Confluence, SVN)
--   Coding style: [*SDL C++ Style*](https://github.com/smartdevicelink/sdl_core/wiki/SDL-Coding-Style-Guide)
-## 7.1. Infrastructure Level 1
-
-Describe (usually in a combination of diagrams, tables, and text):
-
-- the distribution of your system to multiple locations, environments,
-  computers, processors, .. as well as the physical connections
-  between them
-
-- important justification or motivation for this deployment structure
-
-- Quality and/or performance features of the infrastructure
-
-- the mapping of software artifacts to elements of the infrastructure
-
-For multiple environments or alternative deployments please copy that
-section of arc42 for all relevant environments.
-
-## 7.2. Infrastructure Level 2
-
-Here you can include the internal structure of (some) infrastructure
-elements from level 1.
-
-Please copy the structure from level 1 for each selected element.
+  You can separate this into different levels...
 
 
-Ref to startum fork for sample in Development kit in human API
+.. _deployment_overview:
+.. figure:: images/uml_siva_deployment_diagram.*
+  :alt: Deployment diagram shows which part of software runs on which machine or device
