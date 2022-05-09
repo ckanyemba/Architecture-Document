@@ -1,48 +1,60 @@
 @startuml
-/'
-It is a source file for SDL SAD sequence diagram.
-For further information, please, follow http://plantuml.com/ 
-'/
+'!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Deployment.puml
+!include <c4/C4_Deployment.puml> 
+title infrastructure
+header Deployment diagram \nInfrastucture architecture \n AllMyData Project \n(partial)
+LAYOUT_WITH_LEGEND()
 
-title Packages - Class Diagram
 
-cloud Cloud <<Clout service>> {
-frame Policies
-database Statistics
-}
-node MobileDevice <<device>> {
-  entity Application1
-  entity Application2
-  entity ApplicationN
+Node("client", "Client", "Desktop / mobile") {
+  Node("nav1", "Web browser", "Chrome / Firefox / Safari") {
+    Container("spa", "AllMyData SPA application", "React.js")
+  }
 }
 
+Node("dc", "Datacenter", "Paris") {
+    Node("r2", "Firewall", "Cisco Firepower 4100")
+    Node("lb1", "LB Ubuntu lb1", "<<active>>")
+    Node("lb2", "LB Ubunut lb2", "<<passive>>")
 
-node HeadUnit <<device>> {
- folder SmartDeviceLink {
-    artifact "SDL binary"
-    artifact "Configuration Files"
-    artifact "Policy dynamic library"
-    artifact "Logger dynamic lybrary"
-    artifact "Remote Controll dynamic lybrary"
- }
- folder VehicleFunctionInterfaces {
-   interface Button <<Button>>
-   interface BC <<Basic Communication>>
-   interface VR <<Voice Recognition>>
-   interface UI <<User Interface>>
-   interface Navigation <<Navigation>>
-   interface VI <<Vehicle Info>>
-   interface SDL <<SDL>>
-   interface RC <<Remote Controll>>
- }
- agent "OS drivers" as OS
+    Node("rp1", "Reverse Proxy", "x2 Ubuntu Buster <<active/active>>") {
+      Container("ha1", "Reverse Proxy", "HaProxy")
+    }
+
+    Node("server_gui", "HMI HMI server", "x2 Ubuntu Buster") {
+      Node("sw1", "Web server", "Nginx") {
+        Container("guis1", "SPA Web Application", "React.js", "Expose static resources \n (.js, .html, images ...)")
+      }
+      Node("tomcat_batchs1", "JEE Server", "Tomcat 10") {
+        Container("batch1", "batch-process-requests", "Java", "Process requests")
+      }
+    }
+
+    
+    Node("sup1_server", "Monitoring Server", "x1 Debian Stretch") {
+      Container("sup1", "Monitoring tool", "Centreon")
+    }
+
+    Node("ech1", "Exchange Server", "x1 Windows Server") {
+      Container("gw1", "API Gateway", "Axway API Gateway")
+    }
+
+   
+    Node("all_servers", "<all servers>", "Monitoring")
 }
 
-MobileDevice -- OS
-OS -- SmartDeviceLink
-Cloud -- MobileDevice 
+spa -> r2 : HTTPS on the Internet
+r2 --> lb1 : HTTPS
+lb2 -> lb1 : Heartbeat VRRP
+lb1 -> ha1
+ha1 --> guis1 : HTTP
+api1 -> mq1 : product \n JMS / RabbitMQ
+batch1 --> mq1 : consume \n JMS / RabbitMQ
+batch1 --> mail1 : SMTP / sending mails
+api1 --> gw1 : SOAP / HTTPS
+ha1 --> api1 : REST / HTTP
+sup1 --> all_servers : SNMP
 
-
-skinparam defaultFontSize 16
+Rel_Left("bdd1", "bay1", "FC")
 
 @enduml
