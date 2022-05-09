@@ -2,7 +2,7 @@
 
 ## Objective
  
- - This document provides the working standard for the infrastructure design and service delivery model of the TurtlePay® project. While this document does serve as an outline and model for how the services will be designed and ultimately provided, it is subject to change without notice and actual service delivery models may differ from this document.
+> * This document provides the working standard for the infrastructure design and service delivery model of the Human-Protocol project. While this document does serve as an outline and model for how the services provided, it is subject to change without notice and actual service delivery models may differ from this document.
 
 Our goal; however, is to maintain concurrency between the service platform and this document for all to enjoy.
 
@@ -24,12 +24,7 @@ To store the blockchain, multiple candidate database systems are being evaluated
 * Isolation
 * Durability
 
-
-
-### [TurtleCoin® Wallet Service (TWS)](https://github.com/TurtlePay/turtlepay-wallet)
-
-As with any blockchain system, a wallet must be maintained. The core functionality of a wallet is as follows:
-
+> * As with any blockchain system, a wallet must be maintained. The core functionality of a wallet is as follows:
 * Hold Public & Private Keys
 * Scan blockchain transactions
   * Retrieve outputs meant for our keys
@@ -37,29 +32,7 @@ As with any blockchain system, a wallet must be maintained. The core functionali
   * Create new inputs from spendable outputs
 * Generate & Sign new transactions
 
-Our wallet(s), instead of relying on a service such as `turtle-service` will live as native services that interact not with the node but with the data collected by the BDCAs. The wallet(s) will scan transactions and the transaction memory pool directly from the database.
-
-Benefits of working with the data in the database instead of a traditional wallet include, but are not limited to:
-
-* Provides a [DMZ](https://en.wikipedia.org/wiki/DMZ_(computing))-style buffer between the TurtleCoin® network and the TurtlePay® services
-* Provides an [abstraction layer](https://en.wikipedia.org/wiki/Abstraction_layer) that does not rely on the underlying wallet software
-* Fine grain atomic control of wallet operations
-* Easy to scale and spin up on demand
-  * Permits One Time Use (OTU) wallets
-
-***Note:*** Development of a [Node.js](https://nodejs.org/) native wallet is underway to support this effort.
-
-### [Blockchain Relay Agent (BRA)](https://github.com/TurtlePay/blockchain-relay-agent)
-
-Each BRA is tasked with ensuring that new transactions from the TurtlePay® platform are properly relayed to the TurtleCoin® network for processing. Each transaction meant for network consumption is queued by the TurtlePay® platform before being broadcast to the TurtleCoin® network. The BRA is charged with verifying that the transaction has been accepted by a node and providing the state of such back to TurtlePay®.
-
-***Note:*** Multiple outgoing transfers from the TurtlePay® platform may be combined into a single network transaction to make the most efficient use of block space.
-
-## TurtlePay® Services
-
-### [Public Website](https://turtlepay.io)
-
-The front-end website provides general functionality similar to other payment gateway platforms such as, but not limited to:
+> * HUMAN Protocol allows Exchanges to publish arbitrary job types, but it also defines many standard job types that serve as building blocks for a multitude of tasks. This becomes interesting when we consider an area of active research and development today, factored cognition : decomposing complicated work into simple components
 
 * Automated Account Creation
 * Account Maintenance
@@ -92,6 +65,11 @@ The following diagram has been created to document the design concept driving [P
 
 ![C4_Component](https://user-images.githubusercontent.com/95967301/164978032-1de41ece-2ed1-4a1f-867c-fa1bb9dfc58f.svg)
 
+|---|---|
+|Resiliency|Because the business logic is controlled by a smart contract, a DApp backend will be fully distributed and managed on a blockchain platform. Unlike an application deployed on a centralized server, a DApp will have no downtime and will continue to be available as long as the platform is still operating.|
+|Transparency|The on-chain nature of a DApp allows everyone to inspect the code and be more sure about its function. Any interaction with the DApp will be stored forever in the blockchain.|
+|Censorship resistance|As long as a user has access to an Ethereum node (running one if necessary), the user will always be able to interact with a DApp without interference from any centralized control. No service provider, or even the owner of the smart contract, can alter the code once it is deployed on the network.|
 
+> * In the Ethereum ecosystem as it stands today, there are very few truly decentralized apps—most still rely on centralized services and servers for some part of their operation. In the future, we expect that it will be possible for every part of any DApp to be operated in a fully decentralized way.
 
 ###### (c)
