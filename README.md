@@ -10,9 +10,9 @@ Please take a look around and ask questions via issues, comments on files, or fi
 |Document|Description|
 |---|---|
 |[Introduction](https://github.com/)|Project Context|
-|[Case Background](https://github.com/)|Project Context|
-|[Components View](https://github.com/)|Project Components|
-|[Deployment View](https://github.com/)|Project Deployment|
-|[Development View](https://github.com/)|Project Development|
-|[Operational View](https://github.com/)|Project Operational|
+|[Case Background](https://github.com/)|Context Diagram|
+|[Components View](https://github.com/)|Container & Components|
+|[Deployment View](https://github.com/)|Deployment Diagram|
+|[Development View](https://github.com/)|Development View|
+|[Operational View](https://github.com/)|Support & Operational|
 
