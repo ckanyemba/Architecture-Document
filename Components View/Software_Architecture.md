@@ -57,7 +57,7 @@ The project will provide a number of example applications including how to integ
 
 #### Sandbox Mode
 
-A sandbox mode for all API requests will be provided to all developers to aide in the development and testing of applications built on the TurtlePay® platform.
+A sandbox mode for all API requests will be provided to all developers to aide in the development and testing of applications built on the Human Protocol® platform.
 
 ## Service Delivery Model
 
@@ -66,9 +66,9 @@ The following diagram has been created to document the design concept driving [P
 ![C4_Component](https://user-images.githubusercontent.com/95967301/164978032-1de41ece-2ed1-4a1f-867c-fa1bb9dfc58f.svg)
 
 |---|---|
-|Resiliency|Because the business logic is controlled by a smart contract, a DApp backend will be fully distributed and managed on a blockchain platform. Unlike an application deployed on a centralized server, a DApp will have no downtime and will continue to be available as long as the platform is still operating.|
-|Transparency|The on-chain nature of a DApp allows everyone to inspect the code and be more sure about its function. Any interaction with the DApp will be stored forever in the blockchain.|
-|Censorship resistance|As long as a user has access to an Ethereum node (running one if necessary), the user will always be able to interact with a DApp without interference from any centralized control. No service provider, or even the owner of the smart contract, can alter the code once it is deployed on the network.|
+|[Resiliency]|Because the business logic is controlled by a smart contract, a DApp backend will be fully distributed and managed on a blockchain platform. Unlike an application deployed on a centralized server, a DApp will have no downtime and will continue to be available as long as the platform is still operating.|
+|[Transparency]|The on-chain nature of a DApp allows everyone to inspect the code and be more sure about its function. Any interaction with the DApp will be stored forever in the blockchain.|
+|[Censorship resistance]|As long as a user has access to an Ethereum node (running one if necessary), the user will always be able to interact with a DApp without interference from any centralized control. No service provider, or even the owner of the smart contract, can alter the code once it is deployed on the network.|
 
 > * In the Ethereum ecosystem as it stands today, there are very few truly decentralized apps—most still rely on centralized services and servers for some part of their operation. In the future, we expect that it will be possible for every part of any DApp to be operated in a fully decentralized way.
 
