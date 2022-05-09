@@ -10,12 +10,9 @@ Please take a look around and ask questions via issues, comments on files, or fi
 |Document|Description|
 |---|---|
 |[Introduction](https://github.com/)|Project Context|
-|[Case Background](https://github.com/)|Project Quality Attributes|
-|[03_Contraints.md](https://github.com/)|Project Contraints|
-|[04_Principles.md](https://github.com/)|Project Principles|
-|[05_Software_Architecture.md](https://github.com/)|Project Software Architecture|
-|[06_Deployment.md](https://github.com/)|Project Infrastructure Architecture|
-|[07_Infrastructure_Architecture.md](https://github.com/)|Project Infrastructure Architecture|
-|[08_Development_Environment.md](https://github.com/)|Project Infrastructure Architecture|
-|[09_Decision Log.md](https://github.com/)|Project Infrastructure Architecture|
-|[10_ProofofDApp.md](https://github.com/)|Project Infrastructure Architecture|
+|[Case Background](https://github.com/)|Project Context|
+|[Components View](https://github.com/)|Project Components|
+|[Deployment View](https://github.com/)|Project Deployment|
+|[Development View](https://github.com/)|Project Development|
+|[Operational View](https://github.com/)|Project Operational|
+
