@@ -10,8 +10,7 @@
 
 Development view organizes SmartDeviceLink components into logical and abstract groups called layers. The layers describe the major tasks that the components perform. The layers have different responsibilities and different providers
 
-##### Development View Diagram
-![Development View](./assets/DevelopmentView.png)
+
 
 ***Elements description***
 
