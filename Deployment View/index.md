@@ -1,52 +1,34 @@
-## 4.9. Deployment View
+## Deployment View
 
 The deployment view takes into account the system's requirements such as system availability, reliability (fault tolerance), performance (throughput), and scalability. This view maps the various elements identified in the logical, process, and development views—networks, processes, tasks, and objects—onto the processing nodes.
 The deployment diagram is used for modeling the static deployment view of a system.
-The figure below depicts the deployment diagram for SDL system.
+The figure below depicts the deployment diagram for DApp system.
 
-|||
 ##### Deployment View Diagram
 ![Deployment View](./assets/deployment_view.png)
-|||
+
+
 
 ***Elements description***
 
 #### Mobile Device
   - *Short Description:*
-    - The SDL application model permits multiple applications to be concurrently active and connected to the HU.
-    - A few of those applications may interact with the user at a time using the HMI (depending on HMI). 
-    - SDL uses the concept of HMI Levels to describe the current state of the application with regards to the level at which the head unit can communicate with it (and vice versa). 
+    - A DApp is an application that is mostly or entirely decentralized, Backend software (application logic), Frontend software, Data storage, Message communications, Name resolution
+    - These applications  interact with blockchain. 
+    - In the Ethereum ecosystem as it stands today, there are very few truly decentralized apps—most still rely on centralized services and servers for some part of their operation. 
   - *Relations:*
-    - Receives policies updates from **Cloud Server**
-    - Sends statistics to **Cloud Server**. 
+    - Backend (Smart Contract)
+    - 
   - *Requirements:*
-    - Android OS or iOS. 
+    - EVM and new languages such as Solidity, the client-side interface of a DApp can use standard web technologies (HTML, CSS, JavaScript, etc.). 
 
 #### Head Unit
   - *Short Description:*
-  - HU HMI allows the user/driver to interact with the vehicle.
+  - The Auction DApp allows a user to register a "deed" token, which represents some unique asset, such as a house, a car, a trademark, etc.
     - This interface includes:
     - A set of presets
     - Media buttons (seek forward/backward, tune up/down, and play/pause)
     - Menu items
     - Graphic user interface
-    - Voice commands, etc.
-  - The HU HMI Handler interfaces with SDL Core to support the API functionality. 
-  - *Relations:*
-    - Communicates with applications on **Mobile Device**
-  - *Requirements:*
-    - N/A
-
-#### CloudServer
-  - *Short Description:*
-    - A Server that provides information about:
-      - Which applications are allowed to run in vehicle 
-      - What interfaces application is allowed to use. 
-    - In addition, server provides:
-      - System configuration, including the time of the next file update
-      - Some important server information to the back end user 
-  - *Relations:*
-    - Sends policies updates to **Mobile Device**.
-    - Receives statistics from **Mobile Device**. 
-  - *Requirements:*
-    - N/A 
+    - a token has been registered, the ownership of the token is transferred to the Auction DApp, 
+  - The Auction DApp lists each of the registered tokens. 
