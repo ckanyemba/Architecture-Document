@@ -1,60 +1,45 @@
 @startuml
 '!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Deployment.puml
 !include <c4/C4_Deployment.puml> 
-title infrastructure
+title Deployment View
 header Deployment diagram \nInfrastucture architecture \n AllMyData Project \n(partial)
 LAYOUT_WITH_LEGEND()
 
 
-Node("client", "Client", "Desktop / mobile") {
+Node("client", "Device", "Desktop / mobile") {
   Node("nav1", "Web browser", "Chrome / Firefox / Safari") {
-    Container("spa", "AllMyData SPA application", "React.js")
+    Container("spa", "Web Front", "HTML, CSS, JS Frontend")
   }
 }
 
-Node("dc", "Datacenter", "Paris") {
-    Node("r2", "Firewall", "Cisco Firepower 4100")
-    Node("lb1", "LB Ubuntu lb1", "<<active>>")
-    Node("lb2", "LB Ubunut lb2", "<<passive>>")
+Node("dc", "Deployment", "Paris") {
 
-    Node("rp1", "Reverse Proxy", "x2 Ubuntu Buster <<active/active>>") {
-      Container("ha1", "Reverse Proxy", "HaProxy")
+    Node("rp1", "Docker", "x2 Ubuntu Buster <<active/active>>") {
+      Container("ha1", "DockerContainer_1", "HaProxy")
     }
 
-    Node("server_gui", "HMI HMI server", "x2 Ubuntu Buster") {
-      Node("sw1", "Web server", "Nginx") {
-        Container("guis1", "SPA Web Application", "React.js", "Expose static resources \n (.js, .html, images ...)")
-      }
-      Node("tomcat_batchs1", "JEE Server", "Tomcat 10") {
-        Container("batch1", "batch-process-requests", "Java", "Process requests")
-      }
-    }
-
+    Node("server_gui", "BigchainDB", "<<device>>") {
+        Container("sw1", "BigchainDB node", "<<component>>")
+        }
     
-    Node("sup1_server", "Monitoring Server", "x1 Debian Stretch") {
-      Container("sup1", "Monitoring tool", "Centreon")
+    Node("sup1_server", "EVM", "executioon Environment") {
+      Container("Registry", "RegistryContracts", "Solidity", "<<artifact>>") 
+      Container("manager", "ManagerContracts", "Solidity", "<<artifact>>")
     }
 
-    Node("ech1", "Exchange Server", "x1 Windows Server") {
-      Container("gw1", "API Gateway", "Axway API Gateway")
+    Node("ech1", "Oracle", "<<device>>") {
+      Container("gw1", "ValidationOracle.js", "<<artifact>>")
     }
-
-   
-    Node("all_servers", "<all servers>", "Monitoring")
 }
+Node("ec", "IPFS", "<<device>>") {
+      Container("gw", "IPFS Daemon", "<<artifact>>")
+    }
 
-spa -> r2 : HTTPS on the Internet
-r2 --> lb1 : HTTPS
-lb2 -> lb1 : Heartbeat VRRP
-lb1 -> ha1
-ha1 --> guis1 : HTTP
-api1 -> mq1 : product \n JMS / RabbitMQ
-batch1 --> mq1 : consume \n JMS / RabbitMQ
-batch1 --> mail1 : SMTP / sending mails
-api1 --> gw1 : SOAP / HTTPS
-ha1 --> api1 : REST / HTTP
-sup1 --> all_servers : SNMP
-
-Rel_Left("bdd1", "bay1", "FC")
+Rel(client, sup1_server, "RPC")
+Rel(sup1_server, ech1, "RPC")
+Rel(ech1, rp1, "HTTP")
+Rel(rp1, ec, "HTTP")
+Rel(ech1, server_gui, "HTTP")
+Rel(server_gui, client, "http")
 
 @enduml
