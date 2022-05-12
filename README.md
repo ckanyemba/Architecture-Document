@@ -11,7 +11,7 @@ Please take a look around and ask questions via issues, comments on files, or fi
 |---|---|
 |[Introduction](https://github.com/)|Project Context|
 |[Case Background](https://github.com/)|Context Diagram|
-|[Components View](https://github.com/)|Container & Components|
+|[Software Architecture](https://github.com/)|Container & Components|
 |[Deployment View](https://github.com/)|Deployment Diagram|
 |[Development View](https://github.com/)|Development View|
 |[Operational View](https://github.com/)|Support & Operational|
