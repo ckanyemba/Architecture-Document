@@ -7,7 +7,7 @@
 Our goal; however, is to maintain concurrency between the service platform and this document for all to enjoy.
 
 
-![C4_Container](https://user-images.githubusercontent.com/95967301/164977167-e33e6200-e163-4cd2-99b0-1a48ab3564f3.svg)
+![C4_Container](https://github.com/ckanyemba/Architecture-Document/blob/main/Diagrams/C4_Model/C4_Container.png)
 
 
 ## Infrastructure
@@ -63,12 +63,16 @@ A sandbox mode for all API requests will be provided to all developers to aide i
 
 The following diagram has been created to document the design concept driving [Phase 2](https://github.com/TurtlePay/architecture/blob/master/Roadmap.md#phase-2).
 
-![C4_Component](https://user-images.githubusercontent.com/95967301/164978032-1de41ece-2ed1-4a1f-867c-fa1bb9dfc58f.svg)
+![C4_Component](https://github.com/ckanyemba/Architecture-Document/blob/main/Diagrams/C4_Model/C4_Component.png)
 
-|---|---|
-|[Resiliency]|Because the business logic is controlled by a smart contract, a DApp backend will be fully distributed and managed on a blockchain platform. Unlike an application deployed on a centralized server, a DApp will have no downtime and will continue to be available as long as the platform is still operating.|
-|[Transparency]|The on-chain nature of a DApp allows everyone to inspect the code and be more sure about its function. Any interaction with the DApp will be stored forever in the blockchain.|
-|[Censorship resistance]|As long as a user has access to an Ethereum node (running one if necessary), the user will always be able to interact with a DApp without interference from any centralized control. No service provider, or even the owner of the smart contract, can alter the code once it is deployed on the network.|
+> * Resiliency 
+   > - Because the business logic is controlled by a smart contract, a DApp backend will be fully distributed and managed on a blockchain platform. Unlike an application deployed on a centralized server, a DApp will have no downtime and will continue to be available as long as the platform is still operating.|
+
+> * Transparency
+  > - The on-chain nature of a DApp allows everyone to inspect the code and be more sure about its function. Any interaction with the DApp will be stored forever in the blockchain.|
+
+> * Censorship resistance
+  > * As long as a user has access to an Ethereum node (running one if necessary), the user will always be able to interact with a DApp without interference from any centralized control. No service provider, or even the owner of the smart contract, can alter the code once it is deployed on the network.|
 
 > * In the Ethereum ecosystem as it stands today, there are very few truly decentralized apps—most still rely on centralized services and servers for some part of their operation. In the future, we expect that it will be possible for every part of any DApp to be operated in a fully decentralized way.
 
