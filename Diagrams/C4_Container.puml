@@ -5,47 +5,48 @@
 LAYOUT_TOP_DOWN()
 LAYOUT_WITH_LEGEND()
 
-title Component Diagram for Human Protocol - Human API
+title Container Diagram for Human Protocol - Human API
 
 Person(authorized, "User", "Backend Services / Frontend Services", "user_check")
 System(person_authorized, "Authorized User via Human API", "Sends manifest to Reputation Agent", "user_check")
 
 System_Boundary(DApp, "   "){
-Container(network, "ENS", "ether")
+Container(network, "ENS", "Network Utility, Capacity")
 Container(admin, "Ethereum Blockchain", "Smart Bounty and New Created")
 Container(extFe, "Swarm", "User Interfaces, [JavaScript client for the Swarm database]")
-Container(whisper, "Whisper", "Whisper is a component, [Whisper is available through CocoaPods]")
-Container(reader, "auction.ethereumbook.eth", " ")
-Container(auctionRepo, "AuctionRepository", "Smart Contract[Manage non-fungible tokens by implementing an asset/token/deed]")
-Container(deepRepo, "DeepRepository", "[Holds asset/token/deed that is to be auctioned(ERC721 Ownership by smart contract)]")
-Container(notification, "HTML, CSS, JS Frontend", "interface")
-Container(blogService, "Auction Images", " ")
-Container(auctionChat, "Auction Chat Rooms", " ")
+Container(whisper, "Whisper", "<<P2P messaging protocol for DApps>>")
 }
+Container(reader, "auction.ethereumbook.eth", " The Ethereum Name System (ENS)(DNS)")
+Container(auctionRepo, "AuctionRepository", "Smart Contract[Manage non-fungible tokens by implementing an asset/token/deed")
+Container(deepRepo, "DeepRepository", "Holds asset/token/deed that is to be auctioned(ERC721 Ownership by smart contract)")
+Container(notification, "HTML, CSS, JS Frontend", "interface")
+Container(blogService, "Auction Images", "<<Image for each auction>>")
+Container(auctionChat, "Auction Chat Rooms", "<<Chat rooms for all participants>>")
 
-Rel(person_authorized, extFe, " ")
+
+Rel(person_authorized, extFe, " Sends manifesto Reputation")
 Rel(person_authorized, admin, "Signed manifest, Smart Bount, and Funds")
-Rel(admin, auctionRepo, " ")
-Rel(person_authorized, whisper, " ")
-Rel(person_authorized, network, " ")
-Rel(auctionRepo, admin, " ")
+Rel(admin, auctionRepo, " Auction DApp allows a user to register a deed token")
+Rel(person_authorized, whisper, "Exchanges views job and begins work ")
+Rel(person_authorized, network, "User eth Interface")
+Rel(auctionRepo, admin, "AuctionRepository.sol: The main Auction DApp smart contract")
 Rel(authorized, person_authorized, " ")
 Rel(extFe, person_authorized, " ")
 Rel(admin, person_authorized, " ")
 Rel(deepRepo, admin, " ")
 Rel(whisper, person_authorized, " ")
-Rel(network, person_authorized, "  ")
-Rel(admin, deepRepo, " ")
+Rel(network, person_authorized, " P2P storage system")
+Rel(admin, deepRepo, "DeepRepository.sol: An ERC721 deed token for use in an auction")
 
-Rel(network, reader, " ", " ")
-Rel(reader, network, " ", " ")
-Rel(extFe, notification, " ")
-Rel(whisper, auctionChat, " ")
-Rel(auctionChat, whisper, " ")
-Rel(extFe, blogService, " ")
+Rel(network, reader, " ENS operates on snodes instead of human-readable names")
+Rel(reader, network, " Sends Key to Server ")
+Rel(extFe, notification, "Store all the application code on Swarm")
+Rel(whisper, auctionChat, "A Whisper client to create per-auction chat rooms for all participants")
+Rel(auctionChat, whisper, "Visits website and gets request ")
+Rel(extFe, blogService, " A Swarm client to store resources such as images")
 
-Rel(notification, extFe, " ")
-Rel(blogService, extFe, " ")
+Rel(notification, extFe, "Store all the application code on Swarm")
+Rel(blogService, extFe, "Swarm to store the icon image for each auction")
 
 
-@endumlhm
+@enduml
