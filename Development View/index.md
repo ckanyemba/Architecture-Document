@@ -1,85 +1,36 @@
-## 4.8. Development View
+##  Development
 
-### 4.8.1. Implementation Technologies
+# Human API Server
 
-- C++98 language is selected as a programming language for SmartDeviceLink as a OS and CPU architecture independent.
-- [*CMake*](https://cmake.org/documentation/) tool-chain selected as a cross-platform building tools.
-- [Google Test](https://github.com/google/googletest/blob/master/googletest/docs/Documentation.md) with [Google Mock](https://github.com/google/googletest/blob/master/googlemock/docs/Documentation.md) extension is chosen as an opensource C++ test framework.
+## Overview
+This server is based on the spec defined [here](https://app.swaggerhub.com/apis/excerebrose/human-protocol/1.0.0#/)
 
-### 4.8.2. Modules and Code Base Organization
+## Requirements
+Python 3.7.2+
 
-Development view organizes SmartDeviceLink components into logical and abstract groups called layers. The layers describe the major tasks that the components perform. The layers have different responsibilities and different providers
+## Usage
+To run the server, please execute the following from the root directory:
+
+```
+./bin/run
+```
+
+Your Swagger definition will be here:
+
+```
+http://localhost:8080/swagger.json
+```
+
+To run the integration tests, use:
+```
+./bin/test
+```
 
 
+### 1. Implementation Technologies
 
-***Elements description***
+- Javascript, Solidity, reactjs, rust, HTML, CSS  is selected as programming languages for Human Protocol architecture independent.
 
-#### OS Layer
-  - *Responsibility*
-    - Providing high-level interface for OS and hardware resource manipulation.
-  - *Relations:*
-    - Used by all other layers
-  - *Interfaces:*
-    - Provides threads, timers, synchronization, data, time, file and logging interfaces
-  - *Behavior:*
-    - Wrapping all OS-system-specific API to C++ Objects.
-  - *Constraints:*
-    - N/A
-
-#### Transport Layer
-  - *Responsibility*
-    - Encapsulates mobile and HMI transports usage
-  - *Relations:*
-    - Protocol layer
-  - *Interfaces:*
-    - TransportManager
-    - HMIMessageHandler
-  - *Behavior:*
-    - Opens connection
-    - Performs device discovery
-    - Sends / receives messages
-  - *Constraints:*
-    - [Transport Manager Programming guide](../../Transport Manager Programming/index.md)
-
-#### Protocol Layer
-  - *Responsibility:*
-    - Encapsulates protocol manipulation.
-  - *Relations:*
-    - Application layer
-    - Transport layer
-  - *Interfaces:*
-    - ProtocolHandler
-    - ConnectionHandler
-    - SecurityManager
-  - *Behavior:*
-    - Parses and handles messages from transport layer according to Protocol
-    - Notify upper level about new transport and protocol layer events
-    - Provides Transport Layer manipulation by upper layers
-  - *Constraints:*
-    - [SmartDeviceLink Protocol specification](https://github.com/smartdevicelink/protocol_spec/blob/master/README.md)
-
-#### Application Layer
-  - *Responsibility:*
-    - Represents main business logic implementation
-  - *Relations:*
-    - Protocol Layer
-  - *Interfaces:*
-    - ApplicationManager
-    - MediaManager
-    - RPC Service
-    - RequestController
-    - App Launch
-    - Resumption
-    - Plugin Manager
-    - RC RPC Plugin
-    - SDL RPC Plugin
-    - VehicleInfo Plugin
-    - Policy
-   - *Behavior:*
-     - Main business logic functionality.
-  - *Constraints:*
-    - [FORD Mobile API Spec](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/interfaces/MOBILE_API.xml)
-    - [FORD HMI API Spec](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/interfaces/HMI_API.xml)
 
 ### 4.8.3. Development Environment and Standards
 -   Minimum development and testing environment for Ubuntu:
