@@ -51,7 +51,7 @@ The API design will be outlined further in another document within this reposito
 
 The project will provide a collection of standard utilities to interact with the TurtlePay® API. Different libraries will be made available upon request and within reason.
 
-#### Example Applications
+
 
 The project will provide a number of example applications including how to integrate TurtlePay® services into other applications or e-commerce platforms upon request and within reason.
 
@@ -64,6 +64,26 @@ A sandbox mode for all API requests will be provided to all developers to aide i
 The following diagram has been created to document the design concept driving [Phase 2](https://github.com/TurtlePay/architecture/blob/master/Roadmap.md#phase-2).
 
 ![C4_Component](https://github.com/ckanyemba/Architecture-Document/blob/main/Diagrams/C4_Model/C4_Component.png)
+
+#### Components Applications
+
+## Smart Bounty
+ - A smart bounty is a contract running on a blockchain that serves as an unmodifiable, auditable agreement between two or more parties.An amount of HMT is attached to each smart bounty and held in escrow until the work is completed (according to the job’s specifications). If the work is not completed or if the job is canceled, the HMT is returned to the Requester.
+ 
+## Requesters
+ - The Requester submits a job to HUMAN Protocol. The job is formatted as a smart bounty, which contains the details of the job, and a sum of the Requester's HMT to fund the work.
+
+## Workers
+ - The Workers perform work as specified by the Requester. A Worker can be an individual, a website, or a machine.
+
+## Job Exchanges
+ - A Job Exchange is an application that has been integrated with HUMAN Protocol, and which Workers interact with to complete tasks. The more applications that integrate with the Protocol, the more tasks that are available to Workers.
+
+## Recording Oracle
+ - The Recording Oracle is a third-party program that records and verifies Workers’ responses to tasks. A Recording Oracle checks to confirm that responses to tasks are of similar quality and, in case of discrepancies, continues to investigate response quality by seeking responses to those tasks from additional Workers. When finished, the Recording Oracle sends response information to the Reputation Oracle.
+
+## Reputation Oracle
+ - The Reputation Oracles is a decentralized third-party program that ensures that the overall response quality for a job meets the defined threshold and, upon completion, initiates payouts to Workers. The Reputation Oracle is also designed to provide and update reputation scores for Workers and Validators.
 
 > * Resiliency 
    > - Because the business logic is controlled by a smart contract, a DApp backend will be fully distributed and managed on a blockchain platform. Unlike an application deployed on a centralized server, a DApp will have no downtime and will continue to be available as long as the platform is still operating.|
