@@ -41,9 +41,9 @@ To store the blockchain, multiple candidate database systems are being evaluated
 
 ### Developer Tools
 
-#### [Application Programming Interface (API)](https://docs.turtlepay.io)
+#### [Application Programming Interface](https://www.humanprotocol.org/)
 
-API services as used by developers will be provided via standard HTTP RESTful calls to a common gateway interface (i.e. https://api.turtlepay.io).
+API services as used by developers will be provided via standard HTTP RESTful calls to a common gateway interface (i.e. https://app.swaggerhub.com/apis/excerebrose/human-protocol/1.0.0#/).
 
 The API design will be outlined further in another document within this repository at a later date.
 
@@ -61,7 +61,7 @@ A sandbox mode for all API requests will be provided to all developers to aide i
 
 ## Service Delivery Model
 
-The following diagram has been created to document the design concept driving [Phase 2](https://github.com/TurtlePay/architecture/blob/master/Roadmap.md#phase-2).
+The following diagram has been created to document the design concept driving [Phase 2](https://www.humanprotocol.org/roadmap).
 
 ![C4_Component](https://github.com/ckanyemba/Architecture-Document/blob/main/Diagrams/C4_Model/C4_Component.png)
 
