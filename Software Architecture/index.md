@@ -107,16 +107,6 @@ The following diagram has been created to document the design concept driving [P
   - *Relations*
     -   Used by all components.
 
-### HMI layer components:
-
-#### HMI Message Handler
-  - *Responsibility*
-    - Formatting message to and from unified protocol-API-independent format used by higher-level component.
-    - Transferring RPC Messages between business-layer and configured transport.
-  - *Constraints*
-    - Processes messages from a single instance of HMI only.
-    - HMI-transport need to be statically configurable with build flags.
-
 ### Application layer components:
     - N/A
 
