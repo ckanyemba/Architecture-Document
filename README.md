@@ -9,7 +9,6 @@ Please take a look around and ask questions via issues, comments on files, or fi
 
 |Document|Description|
 |---|---|
-|[Introduction](https://github.com/)|Project Context|
 |[Case Background](https://github.com/)|Context Diagram|
 |[Software Architecture](https://github.com/)|Container & Components|
 |[Deployment View](https://github.com/)|Deployment Diagram|
