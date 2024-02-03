@@ -6,7 +6,7 @@
 LAYOUT_AS_SKETCH()
 LAYOUT_TOP_DOWN()
 
-title Component diagram for Human Protocol
+title Component diagram for Apadana Group
 
 header System context diagram \nComponent Diagram point of view \n of the Human project
 LAYOUT_WITH_LEGEND()
